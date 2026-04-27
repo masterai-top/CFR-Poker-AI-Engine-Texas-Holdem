@@ -1,3 +1,5 @@
+<img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
+
 # 🧠 MasterAI 3.0 | 1对9德州扑克AI | 毫秒级决策 | 完整源码+训练模型|Texas Hold’em Poker AI Engine | 扑克AI引擎 | CFR策略系统
 
 > **全球首个1对多无限注德州AI | 可同时战胜多个顶级职业牌手 | C++实现**
