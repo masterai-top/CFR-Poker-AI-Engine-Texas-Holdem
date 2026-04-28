@@ -1,9 +1,26 @@
 <img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
 
-# 🧠 MasterAI 3.0 | 1对9德州扑克AI | 毫秒级决策 | 完整源码+训练模型|Texas Hold’em Poker AI Engine | 扑克AI引擎 | CFR策略系统
+# 🧠 MasterAI 3.0 | 1对9德州扑克AI | 毫秒级决策 | 完整源码+训练模型|Texas Hold’em Poker AI Engine | 扑克AI引擎 | CFR策略系统|CFR Poker AI Engine | 德州扑克CFR AI | 1对9德州扑克AI引擎
 
 > **全球首个1对多无限注德州AI | 可同时战胜多个顶级职业牌手 | C++实现**
+# CFR Poker AI Engine | 德州扑克CFR AI | 1对9德州扑克AI引擎
 
+**CFR Poker AI** · **德州扑克AI** · **1对9德州AI** · **毫秒级决策**  
+**MasterAI 3.0 - 完整C++ CFR/MCCFR Poker AI Engine + 训练模型**
+
+全球首个公开的**1对9德州扑克AI引擎**。基于 Counterfactual Regret Minimization (CFR/MCCFR) 算法实现，支持多人自博弈训练，可实现毫秒级实时决策。已完成72.8亿手训练，具备较强对抗顶级职业选手的潜力。
+
+适合研究、二次开发或集成到德州扑克平台中使用。
+
+[立即联系获取完整训练模型、技术文档与商用授权](#联系我们)
+
+## ✨ 核心突破
+
+- 支持 **1v1 至 1v9** 多人德州扑克AI
+- 决策速度：**6-10 毫秒/步**
+- 训练规模：72.8亿手自博弈，19,255,000 次迭代
+- 采用 CFR + MCCFR + 抽象博弈树 + 对手建模
+- 提供完整C++源码 + 已训练策略模型
 [![Contact](https://img.shields.io/badge/联系-TG%3A%40xuzongbin001-blue)](https://t.me/xuzongbin001)
 [![Python](https://img.shields.io/badge/C%2B%2B-11-blue.svg)](https://isocpp.org/)
 [![Stars](https://img.shields.io/github/stars/masterai-top/Texas-Hold-em-Poker-AI?style=social)](https://github.com/masterai-top/Texas-Hold-em-Poker-AI)
