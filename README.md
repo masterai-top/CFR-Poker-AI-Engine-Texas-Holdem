@@ -89,7 +89,7 @@ MasterAI 3.0 是Master AI团队研发的**1对多德州扑克AI**，支持1v1、
 | :---: | :---: | :---: |
 <img width="379" alt="微信图片_20241030112757" src="https://github.com/user-attachments/assets/c803f6ea-1ab9-4bb7-b2d7-2ca85cc13418">
 
-> 📷 技术文档和测试报告，联系我可获取
+
 
 ## 💰 获取源码
 
