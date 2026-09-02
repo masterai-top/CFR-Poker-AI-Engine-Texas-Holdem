@@ -1,6 +1,6 @@
 [简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
 
-# 多人德州撲克 CFR AI 實驗引擎
+# 多人德州撲克 CFR AI 實驗引擎|德州AI|德州AI辅助工具
 
 <img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
 ## 多人撲克 AI 实验 | CFR-Poker-AI-Engine-Texas-Holdem
