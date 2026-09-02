@@ -173,7 +173,6 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 📧 **Email：masterai918@gmail.com**
 
 
-👉 **聯絡我以取得簡報 + 詳細報價**
 
 
 ---
