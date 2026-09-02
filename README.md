@@ -1,18 +1,23 @@
 [简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+# MasterAI 3.0 |  德州AI | 德州AI源码| 德州扑克CFR AI |CFR-Poker-AI-Engine-Texas-Holdem
+<img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" 
 
-<img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
+> 项目功能、性能、运营记录与部署能力应结合当前版本独立验证；许可证和第三方素材范围以仓库文件为准。
 
-# 🧠 MasterAI 3.0 |  德州AI | 德州AI源码||Texas Hold’em Poker AI Engine | 扑克AI | CFR策略系统|CFR Poker AI Engine | 德州扑克CFR AI | 
 
+> **项目资料所述的1对多无限注德州AI | 面向多人扑克 AI 策略研究，实际效果以公开评测为准 | C++实现***
+## CFR Poker AI Engine | 德州扑克CFR AI | 1对9德州扑克AI引擎
 > **全球首个1对多无限注德州AI | 可同时战胜多个顶级职业牌手 | C++实现***
-# CFR Poker AI Engine | 德州扑克CFR AI | 1对9德州扑克AI引擎
 
-**CFR Poker AI** · **德州扑克AI** · **1对9德州AI** · **毫秒级决策**  
+**CFR Poker AI** · **德州扑克AI** · **1对9德州AI** · **低延迟决策目标**  
 **MasterAI 3.0 - 完整C++ CFR/MCCFR Poker AI Engine + 训练模型**
 
-全球首个公开的**1对9德州扑克AI引擎**。基于 Counterfactual Regret Minimization (CFR/MCCFR) 算法实现，支持多人自博弈训练，可实现毫秒级实时决策。已完成72.8亿手训练，具备较强对抗顶级职业选手的潜力。
+
+项目资料所述的公开的**1对9德州扑克AI引擎**。基于 Counterfactual Regret Minimization (CFR/MCCFR) 算法实现，支持多人自博弈训练，可实现低延迟决策（实际延迟需通过基准测试验证）。已完成72.8亿手训练，具备较强对抗顶级职业选手的潜力。
+
 
 适合研究、二次开发或集成到德州扑克平台中使用。
+
 
 [立即联系获取完整训练模型、技术文档与商用授权](#联系我们)
 
