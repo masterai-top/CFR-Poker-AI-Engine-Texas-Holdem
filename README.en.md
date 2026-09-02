@@ -1,14 +1,14 @@
-[简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
+
+# Multiplayer Texas Holdem CFR Poker AI Engine
 
 <img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
-# CFR-Poker-AI-Engine-Texas-Holdem
+## CFR-Poker-AI-Engine-Texas-Holdem
 
-CFR-based Texas Hold'em AI engine for multi-player strategy research and reproducible evaluation in C++. This document preserves the project's existing features, architecture, screenshots and usage notes; the repository contents remain authoritative.
 
 > Validate features, performance, operational history and deployment requirements against the current version. License and third-party asset terms are defined by repository files.
 
 
-> **World's first 1-vs-many No-Limit Texas Hold’em AI | Capable of defeating multiple top-tier professional players simultaneously | Implemented in C++**
 ## CFR Poker AI Engine | Texas Hold’em CFR AI | 1-vs-9 Texas Hold’em AI Engine
 
 
@@ -19,7 +19,6 @@ CFR-based Texas Hold'em AI engine for multi-player strategy research and reprodu
 The project-described publicly available **1-vs-9 Texas Hold’em AI engine**.
 Implemented using the Counterfactual Regret Minimization (CFR/MCCFR) algorithm, it supports multi-player self-play training and enables real-time decision-making within milliseconds.
 Having undergone training on 7.28 billion hands, it possesses the potential to compete strongly against top-tier professional players.
-
 
 
 Suitable for research, secondary development, or integration into Texas Hold’em platforms.
@@ -50,7 +49,6 @@ Suitable for research, secondary development, or integration into Texas Hold’e
 
 
 This is a Texas Hold’em Poker AI decision engine system.
-
 
 
 Built using game theory and regret minimization techniques.
@@ -108,8 +106,6 @@ A single AI instance can compete against multiple top-tier players simultaneousl
 └── Configure.cpp/hpp # Configuration management
 
 
-
-
 ## 📸 Technical Architecture
 
 
@@ -130,6 +126,7 @@ Battle Effect |
 📧 **Email: masterai918@gmail.com**
 
 
+👉 **Contact me for a demo + detailed quote**
 
 
 ---
@@ -194,16 +191,10 @@ Game Tree → Information Sets → Regret Calculation → Strategy Update → Ac
 - ## 🚀 Quick Start
 
 
-
-
 git clone xxx
 cd project
 pip install -r requirements.txt
 python main.py
-
-
-
-
 
 
 ## MasterAI-3.0-1VS9-NoLimit: One-vs-Many No-Limit Texas Hold'em AI
@@ -247,7 +238,4 @@ Correction of issues regarding settlement data from training hands (dirty values
 6. Search duration optimization (AI decision time: 6ms–10ms)
 
 
-
-
 Those interested in the Master AI 3.0 training model and AI algorithms, or those wishing to purchase the AI ​​source code for collaboration, please contact Telegram: @xuzongbin001
-

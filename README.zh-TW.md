@@ -1,42 +1,33 @@
-[简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
+
+# 多人德州撲克 CFR AI 實驗引擎
 
 <img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
-# 多人撲克 AI 实验 | CFR-Poker-AI-Engine-Texas-Holdem
+## 多人撲克 AI 实验 | CFR-Poker-AI-Engine-Texas-Holdem
 
-本專案聚焦多人撲克 AI 实验，保留線上現有 README 的功能、架構、截圖與使用說明，並以倉庫實際程式碼為準。
 
 > 專案功能、效能、營運記錄與部署能力應結合目前版本獨立驗證；授權與第三方素材範圍以倉庫檔案為準。
 
 
-
-> **全球首個1對多無限注德州AI | 可同時戰勝多個頂級職業牌手 | C++實現***
-
 ## CFR Poker AI Engine | 德州撲克CFR AI | 1對9德州撲克AI引擎
 
 
-
-**CFR Poker AI** · **德州撲克AI** · **1對9德州AI** · **毫秒級決策**
+**CFR Poker AI** · **德州撲克AI** · **1對9德州AI** · **低延遲決策目標**
 
 **MasterAI 3.0 - 完整C++ CFR/MCCFR Poker AI Engine + 訓練模式**
 
 
-
-全球首個公開的**1對9德州撲克AI引擎**。
-基於 Counterfactual Regret Minimization (CFR/MCCFR) 演算法實現，支援多人自博弈訓練，可實現毫秒級即時決策。
+基於 Counterfactual Regret Minimization (CFR/MCCFR) 演算法實現，支援多人自博弈訓練，可實現低延遲決策（實際延遲需透過基準測試驗證）。
 已完成72.8億手訓練，具備較強對抗頂尖職業選手的潛力。
-
 
 
 適合研究、二次開發或整合到德州撲克平台中使用。
 
 
-
 [立即聯絡以取得完整訓練模型、技術文件與商用授權](#聯絡我們)
 
 
-
 ## ✨ 核心突破
-
 
 
 - 支援 **1v1 至 1v9** 多人德州撲克AI
@@ -56,19 +47,15 @@
 [![Stars](https://img.shields.io/github/stars/masterai-top/Texas-Hold-em-Poker-AI?style=social)](https://github.com/masterai-top/Texas-Hold-em-Poker-AI)
 
 
-
 🔥 Game Theory Poker AI System
 
 👉 CFR / MCCFR / Strategy Engine / Opponent Modeling
 
 
-
 ---
 
 
-
 ## 🧠 Project Overview
-
 
 
 This is a Texas Hold’em Poker AI engine.
@@ -76,18 +63,14 @@ This is a Texas Hold’em Poker AI engine.
 本項目是一套德州撲克AI決策引擎系統。
 
 
-
 Built using game theory and regret minimization techniques.
-
 
 
 ## 🏆 核心突破 | Breakthrough
 
 
-
 MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、1v2、1v3、1v6、1v9。
 一個AI可同時與多個頂級牌手對戰。
-
 
 
 | 指標 | 數據 |
@@ -107,9 +90,7 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 | **模型數量** | 99個 |
 
 
-
 ## 🧠 核心技術 | Technology
-
 
 
 | 技術模組 | 說明 |
@@ -124,12 +105,10 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 
 | **藍圖搜尋最佳化** | FOLD/CALL/RAISE/DEFAULT四藍圖 |
 
-| **策略即時訓練** | 毫秒級決策最佳化 |
-
+| **策略即時訓練** | 決策延遲最佳化（需基準測試驗證） |
 
 
 ## 🎯 訓練資料 | Training
-
 
 
 | 參數 | 配置 |
@@ -151,7 +130,6 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 | 遊戲局數 | 7,284,283,624 |
 
 
-
 ## 📁 程式碼結構
 
 ├── Pluribus.cpp/hpp # Pluribus演算法核心
@@ -171,11 +149,7 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 └── Configure.cpp/hpp # 設定管理
 
 
-
-
-
 ## 📸 技術架構
-
 
 
 | 演算法流程圖 | 訓練曲線 | 對戰效果 |
@@ -183,7 +157,6 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 | :---: | :---: | :---: |
 <img width="379" alt="微信图片_20241030112757" src="https://github.com/user-attachments/assets/c803f6ea-1ab9-4bb7-b2d7-2ca85cc13418">
 ## 💰 取得原始碼
-
 
 
 ✅ 完整C++ AI源碼
@@ -195,27 +168,21 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 ✅ 部署文檔
 
 
-
 📱 **Telegram：@xuzongbin001**
 
 📧 **Email：masterai918@gmail.com**
 
 
-
-
-
+👉 **聯絡我以取得簡報 + 詳細報價**
 
 
 ---
 
 
-
 ⭐ Star 這個倉庫，支持世界級德州AI持續進化！
 
 
-
 ## ⚙️ Core AI Concepts
-
 
 
 - Counterfactual Regret Minimization (CFR)
@@ -229,25 +196,19 @@ MasterAI 3.0 是Master AI團隊研發的**1對多德州撲克AI**，支援1v1、
 - Opponent modeling (optional)
 
 
-
 ---
-
 
 
 ## 🧠 System Architecture
 
 
-
 Game Tree → Information Sets → Regret Calculation → Strategy Update → Action Selection
-
 
 
 ---
 
 
-
 ## 🎮 Features
-
 
 
 - Poker decision engine
@@ -261,13 +222,10 @@ Game Tree → Information Sets → Regret Calculation → Strategy Update → Ac
 - Real-time action inference
 
 
-
 ---
 
 
-
 ## 📊 AI Workflow
-
 
 
 1. Build game tree abstraction
@@ -281,13 +239,10 @@ Game Tree → Information Sets → Regret Calculation → Strategy Update → Ac
 5. Converge toward equilibrium strategy
 
 
-
 ---
 
 
-
 ## 🏆 Use Cases
-
 
 
 - Poker AI research
@@ -301,9 +256,6 @@ Game Tree → Information Sets → Regret Calculation → Strategy Update → Ac
 - ## 🚀 Quick Start
 
 
-
-
-
 git clone xxx
 
 cd project
@@ -311,11 +263,6 @@ cd project
 pip install -r requirements.txt
 
 python main.py
-
-
-
-
-
 
 
 ## MasterAI-3.0-1VS9-NoLimit 德州一對多無限制AI
@@ -337,7 +284,6 @@ MasterAI-3.0 是Master AI 團隊研發出來的1對多的AI，1對1,1對2,1對3�
 在當階決策樹（樹深度為n）採用有限次數的迭代訓練，超過此階自己採用四張藍圖（F OLD、CHECK/CALL，RAISE，DEFAULT）進行遊戲，對手採用隨機策略，不斷迭代更新，使其達到納許均衡
 
 
-
 (二)模型訓練
 
 1.訓練原因
@@ -345,7 +291,6 @@ MasterAI-3.0 是Master AI 團隊研發出來的1對多的AI，1對1,1對2,1對3�
 模型訓練牌局結算資料問題修正（某些遊戲狀態下，遊戲結算訓練資料有髒值）
 
 2.訓練參數
-
 
 
 3.訓練環境
@@ -365,7 +310,6 @@ MasterAI-3.0 是Master AI 團隊研發出來的1對多的AI，1對1,1對2,1對3�
 迭代數量：19255000
 
 遊戲局數：7284283624
-
 
 
 (三)演算法最佳化
@@ -391,8 +335,4 @@ MasterAI-3.0 是Master AI 團隊研發出來的1對多的AI，1對1,1對2,1對3�
 6.搜尋時長優化（1第多的AI決策在6毫秒~10毫秒）
 
 
-
-
-
 對Master AI 3.0訓練模型和AI演算法有興趣或有意購買AI原始碼合作者，可以聯絡 Telegram:@xuzongbin001
-
