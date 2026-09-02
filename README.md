@@ -1,6 +1,8 @@
+[简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+
 <img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
 
-# 🧠 MasterAI 3.0 | 1对9德州扑克AI | 德州AI | 德州AI源码|完整源码+训练模型|Texas Hold’em Poker AI Engine | 扑克AI | CFR策略系统|CFR Poker AI Engine | 德州扑克CFR AI | 1对9德州扑克AI引擎
+# 🧠 MasterAI 3.0 |  德州AI | 德州AI源码||Texas Hold’em Poker AI Engine | 扑克AI | CFR策略系统|CFR Poker AI Engine | 德州扑克CFR AI | 
 
 > **全球首个1对多无限注德州AI | 可同时战胜多个顶级职业牌手 | C++实现***
 # CFR Poker AI Engine | 德州扑克CFR AI | 1对9德州扑克AI引擎
@@ -101,7 +103,7 @@ MasterAI 3.0 是Master AI团队研发的**1对多德州扑克AI**，支持1v1、
 📱 **Telegram：@xuzongbin001**  
 📧 **Email：masterai918@gmail.com**
 
-👉 **联系我获取演示 + 详细报价**
+
 
 ---
 
