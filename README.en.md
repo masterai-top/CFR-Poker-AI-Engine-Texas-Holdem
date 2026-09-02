@@ -130,7 +130,6 @@ Battle Effect |
 📧 **Email: masterai918@gmail.com**
 
 
-👉 **Contact me for a demo + detailed quote**
 
 
 ---
