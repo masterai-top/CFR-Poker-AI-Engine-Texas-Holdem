@@ -1,6 +1,7 @@
 [简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
 # MasterAI 3.0 |  德州AI | 德州AI源码| 德州扑克CFR AI |CFR-Poker-AI-Engine-Texas-Holdem
-<img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" 
+
+<img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
 
 > 项目功能、性能、运营记录与部署能力应结合当前版本独立验证；许可证和第三方素材范围以仓库文件为准。
 
