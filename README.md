@@ -1,208 +1,74 @@
-[简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
-# MasterAI 3.0 |  德州AI | 德州AI源码| 德州扑克CFR AI |CFR-Poker-AI-Engine-Texas-Holdem
+# 多人德州扑克 CFR AI 引擎 | C++ 自我博弈与策略研究
 
-<img width="1080" height="644" alt="640 (1)" src="https://github.com/user-attachments/assets/8e39d7bd-3136-45e9-ba08-73de4c697692" />
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [项目网站](https://masterai-top.github.io/CFR-Poker-AI-Engine-Texas-Holdem/)
 
-> 项目功能、性能、运营记录与部署能力应结合当前版本独立验证；许可证和第三方素材范围以仓库文件为准。
+![多人德州扑克 AI 对局界面](Screenshots/微信图片_20241030103018.jpg)
 
+这是一个面向 **多人无限注德州扑克** 的 C++ CFR AI 引擎。项目围绕反事实遗憾最小化（CFR/MCCFR）、多人自我博弈、信息集、动作抽象、策略保存与实时决策展开，适合扑克博弈研究、AI 策略实验和服务端集成评估。
 
-> **项目资料所述的1对多无限注德州AI | 面向多人扑克 AI 策略研究，实际效果以公开评测为准 | C++实现***
-## CFR Poker AI Engine | 德州扑克CFR AI | 1对9德州扑克AI引擎
-> **全球首个1对多无限注德州AI | 可同时战胜多个顶级职业牌手 | C++实现***
+> 本仓库的独立定位是“多人 CFR 策略引擎”，不同于单挑 HUNL 求解器或通用德州扑克游戏平台。项目资料中的训练规模与延迟数据需在目标硬件和指定配置下独立复测。
 
-**CFR Poker AI** · **德州扑克AI** · **1对9德州AI** · **低延迟决策目标**  
-**MasterAI 3.0 - 完整C++ CFR/MCCFR Poker AI Engine + 训练模型**
+## 核心功能
 
+| 模块 | 能力 |
+|---|---|
+| 多人牌局状态 | 面向 1v1 至多人桌的状态推进、公共牌、下注轮与终局结算 |
+| CFR / MCCFR | 信息集遗憾值、平均策略、自我博弈迭代与策略收敛实验 |
+| 动作与牌力抽象 | Fold、Check/Call、Raise 动作建模及手牌/公共牌聚类 |
+| 训练执行 | 多任务调度、训练参数、模型序列化、断点加载与日志记录 |
+| 决策引擎 | 从当前牌局状态读取策略并输出动作，用于低延迟推理测试 |
+| 工程集成 | C++ 核心、配置文件、Redis 接口字段及 Visual Studio 工程资料 |
 
-项目资料所述的公开的**1对9德州扑克AI引擎**。基于 Counterfactual Regret Minimization (CFR/MCCFR) 算法实现，支持多人自博弈训练，可实现低延迟决策（实际延迟需通过基准测试验证）。已完成72.8亿手训练，具备较强对抗顶级职业选手的潜力。
+## 玩法与决策流程
 
+引擎处理的是德州扑克完整决策循环，而不是单纯的胜率计算器：读取座位与筹码状态，建立私牌和公共牌信息集，生成可行动作，依据平均策略抽样决策，并把牌局结果反馈至遗憾值与策略更新流程。多人模式还需要处理位置、不同有效筹码、行动顺序以及多名对手策略带来的状态扩张。
 
-适合研究、二次开发或集成到德州扑克平台中使用。
+```text
+牌局状态 -> 信息集/抽象 -> 合法动作 -> CFR 策略采样
+        -> Fold / Call / Raise -> 终局收益 -> 遗憾与平均策略更新
+```
 
+## 技术实现
 
-[立即联系获取完整训练模型、技术文档与商用授权](#联系我们)
+- `Pluribus.cpp/.hpp`：多人策略与搜索相关核心逻辑
+- `State.cpp/.hpp`：牌局状态、动作推进和收益计算
+- `Trainer.cpp/.hpp`：自我博弈训练与迭代控制
+- `InfoNode.cpp/.hpp`：信息集节点、遗憾值和平均策略
+- `GamePool.cpp/.hpp`：并行牌局与任务池管理
+- `CardAbst.cpp`、`CardCluster.h`：牌力与状态抽象
+- `TaskExecutor.cpp/.hpp`：训练任务调度
+- `Configure.cpp/.hpp`：训练、模型和运行参数
 
-## ✨ 核心突破
+## 训练与运行参数
 
-- 支持 **1v1 至 1v9** 多人德州扑克AI
-- 决策速度：**6-10 毫秒/步**
-- 训练规模：72.8亿手自博弈，19,255,000 次迭代
-- 采用 CFR + MCCFR + 抽象博弈树 + 对手建模
-- 提供完整C++源码 + 已训练策略模型
-[![Contact](https://img.shields.io/badge/联系-TG%3A%40xuzongbin001-blue)](https://t.me/xuzongbin001)
-[![Python](https://img.shields.io/badge/C%2B%2B-11-blue.svg)](https://isocpp.org/)
-[![Stars](https://img.shields.io/github/stars/masterai-top/Texas-Hold-em-Poker-AI?style=social)](https://github.com/masterai-top/Texas-Hold-em-Poker-AI)
+仓库中的配置截图展示了玩家数量、最大迭代次数、策略更新间隔、剪枝阈值、模型保存/加载路径、任务队列和 Redis 节点等字段。公开页面只说明可观察到的工程结构，不把配置值直接等同于实测性能。
 
-🔥 Game Theory Poker AI System  
-👉 CFR / MCCFR / Strategy Engine / Opponent Modeling  
+![CFR 训练与运行参数](Screenshots/微信图片_20241030112757.png)
 
----
+项目资料还记录了大规模自我博弈训练、模型分片和毫秒级动作决策目标。这些结果受抽象精度、线程数、硬件、模型体积和牌局状态影响，部署前应使用仓库的基准代码复测。
 
-## 🧠 Project Overview
+## 适用场景
 
-This is a Texas Hold’em Poker AI engine.  
-本项目是一套德州扑克AI决策引擎系统。
+- 多人德州扑克 AI 与不完全信息博弈研究
+- CFR/MCCFR、自我博弈、纳什均衡近似实验
+- C++ 扑克机器人策略模块与服务端接口验证
+- 不同抽象、剪枝、采样和对手建模方法的对比评估
+- 训练模型的离线回放、基准测试与复现研究
+- 作为德州辅助软件的离线策略研究组件，而非实时对局作弊工具
 
-Built using game theory and regret minimization techniques.
+## 使用前检查
 
-## 🏆 核心突破 | Breakthrough
+1. 先审查 `LICENSE`、第三方组件和模型授权范围。
+2. 根据当前源码建立真实的构建说明和固定依赖版本。
+3. 使用可复现基准记录硬件、线程、模型、牌局人数和延迟分位数。
+4. 不要把研究引擎用于违反当地法律、平台条款或公平竞技规则的场景。
 
-MasterAI 3.0 是Master AI团队研发的**1对多德州扑克AI**，支持1v1、1v2、1v3、1v6、1v9。一个AI可同时与多个顶级牌手对战。
+## 深入阅读
 
-| 指标 | 数据 |
-| :--- | :--- |
-| **对战模式** | 1v1 ~ 1v9 |
-| **决策速度** | 6-10毫秒/步 |
-| **训练时长** | 15天 |
-| **训练算力** | 256核心 + 2TB内存 |
-| **训练局数** | 72.8亿手 |
-| **模型数量** | 99个 |
+- [多人 CFR 德州 AI（简体）](https://masterai-top.github.io/CFR-Poker-AI-Engine-Texas-Holdem/zh-cn/)
+- [多人 CFR 德州 AI（繁體）](https://masterai-top.github.io/CFR-Poker-AI-Engine-Texas-Holdem/zh-tw/)
+- [Multiplayer CFR Poker AI Engine](https://masterai-top.github.io/CFR-Poker-AI-Engine-Texas-Holdem/en/)
 
-## 🧠 核心技术 | Technology
+## 联系与授权
 
-| 技术模块 | 说明 |
-| :--- | :--- |
-| **深度有限搜索V1.0** | 决策树深度n，四张蓝图求期望 |
-| **深度有限搜索V2.0** | 有限迭代训练，达到纳什均衡 |
-| **多人CFR算法** | 反事实遗憾最小化，多人扩展 |
-| **蓝图搜索优化** | FOLD/CALL/RAISE/DEFAULT四蓝图 |
-| **策略实时训练** | 毫秒级决策优化 |
-
-## 🎯 训练数据 | Training
-
-| 参数 | 配置 |
-| :--- | :--- |
-| 处理器 | 2 × 128 Cores |
-| 内存 | 2TB |
-| 硬盘 | 4TB |
-| 训练时间 | 15天 |
-| 模型数量 | 99个 |
-| 迭代次数 | 19,255,000 |
-| 游戏局数 | 7,284,283,624 |
-
-## 📁 代码结构
-├── Pluribus.cpp/hpp # Pluribus算法核心
-├── State.cpp/hpp # 游戏状态搜索
-├── Trainer.cpp/hpp # 训练器
-├── GamePool.cpp/hpp # 游戏池管理
-├── InfoNode.cpp/hpp # 信息节点
-├── NumPy.cpp/hpp # 数值计算
-├── TaskExecutor.cpp/hpp # 任务执行
-└── Configure.cpp/hpp # 配置管理
-
-
-## 📸 技术架构
-
-| 算法流程图 | 训练曲线 | 对战效果 |
-| :---: | :---: | :---: |
-<img width="379" alt="微信图片_20241030112757" src="https://github.com/user-attachments/assets/c803f6ea-1ab9-4bb7-b2d7-2ca85cc13418">
-
-
-
-## 💰 获取源码
-
-✅ 完整C++ AI源码  
-✅ 训练好的模型文件  
-✅ 训练脚本  
-✅ 部署文档  
-
-📱 **Telegram：@xuzongbin001**  
-📧 **Email：masterai918@gmail.com**
-
-
-
----
-
-⭐ Star 这个仓库，支持世界级德州AI持续进化！
-
-## ⚙️ Core AI Concepts
-
-- Counterfactual Regret Minimization (CFR)  
-- Monte Carlo CFR (MCCFR)  
-- Strategy optimization  
-- Nash equilibrium approximation  
-- Opponent modeling (optional)  
-
----
-
-## 🧠 System Architecture
-
-Game Tree → Information Sets → Regret Calculation → Strategy Update → Action Selection  
-
----
-
-## 🎮 Features
-
-- Poker decision engine  
-- Strategy computation system  
-- Self-play training loop  
-- Exploitability evaluation  
-- Real-time action inference  
-
----
-
-## 📊 AI Workflow
-
-1. Build game tree abstraction  
-2. Compute regret values  
-3. Update strategy profile  
-4. Iterate self-play  
-5. Converge toward equilibrium strategy  
-
----
-
-## 🏆 Use Cases
-
-- Poker AI research  
-- Game theory experiments  
-- Reinforcement learning benchmarks  
-- AI agent training environments
-- ## 🚀 Quick Start
-
-
-git clone xxx  
-cd project  
-pip install -r requirements.txt  
-python main.py
-
-
-
-# MasterAI-3.0-1VS9-NoLimit  德州一对多无限制AI
-MasterAI-3.0 是Master AI 团队研发出来的1对多的AI，1对1,1对2,1对3，1对6，1对9。1个高度智能化具有自我学习的AI可以战胜多个中级高级，在线测试验证，多个国内外顶级牌手在一个牌局中在3000手内很难战胜Master AI 3.0；
-(一)蓝图算法
-1.深度有限搜索算法V1.0
-1)算法思路
-采用深度为n的决策树进行训练模型，超过深度n之外的节点采用四张蓝图（F OLD、CHECK/CALL，RAISE，DEFAULT）求平均期望得结果，此过程当前玩家采用1326套手牌随机采样一套为自己，对手采用随机发一套手牌的方式，不断迭代更新策略。
-2.深度有限搜索算法V2.0
-1)算法思路
-在当阶决策树（树深度为n）采用有限次数的迭代训练，超过此阶自己采用四张蓝图（F OLD、CHECK/CALL，RAISE，DEFAULT）进行游戏，对手采用随机策略，不断迭代更新，使其达到纳什均衡
-
-(二)模型训练
-1.训练原因
-模型训练牌局结算数据问题修正（某些游戏状态下，游戏结算训练数据有脏值）
-2.训练参数
-
-3.训练环境
-处理器：2 * 128 Cores 
-内存大小：2TB
-硬盘大小：4TB
-4.训练时长
-训练时间：15DAYS
-模型数量：99PCS
-迭代数量：19255000
-游戏局数：7284283624
-
-(三)算法优化
-1、多人CFR算法改进(v2)
-2、模型V2训练
-3、新版搜索蓝图改进验证(v2)
-4、新牌搜索蓝图改进与优化
-（1）默认蓝图
-（2）FOLD蓝图
-（3）CALL蓝图
-（4）RAISE蓝图
-5、多人CFR算法改进（策略实时训练时间）
-6、搜索时长优化（1第多的AI决策在6毫秒~10毫秒）
-
-
-对Master AI 3.0训练模型和AI算法感兴趣或者有意购买AI源代码合作者，可以联系 Telegram:@xuzongbin001
+项目合作与商用授权以仓库维护者公布的信息为准。提交 Issue 时请包含操作系统、编译器版本、复现步骤和必要日志。

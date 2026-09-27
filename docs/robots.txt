@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://masterai-top.github.io/CFR-Poker-AI-Engine-Texas-Holdem/sitemap.xml
